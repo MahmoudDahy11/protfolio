@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTheme {
-  // Anti-Gravity Colors
   static const Color primaryColor = Color(0xFF6C63FF); // Electric Violet
   static const Color accentColor = Color(0xFF00F0FF); // Cyan Neon
   static const Color darkBackground = Color(0xFF0A0E21); // Deep Space Blue
@@ -24,7 +23,6 @@ class AppTheme {
     end: Alignment.bottomRight,
   );
 
-  // Shadows (Anti-Gravity Glow)
   static List<BoxShadow> floatingShadow(bool isDark) => [
     BoxShadow(
       color: isDark

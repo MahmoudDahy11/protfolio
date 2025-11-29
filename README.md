@@ -1,13 +1,13 @@
-# Anti-Gravity Portfolio 🚀
+# Flutter Portfolio 🚀
 
-A stunning, responsive Flutter Web portfolio featuring an "Anti-Gravity" aesthetic with floating elements, parallax effects, and smooth animations. Built with a focus on clean architecture and premium user experience.
+A stunning, responsive Flutter Web portfolio featuring a modern aesthetic with floating elements, parallax effects, and smooth animations. Built with a focus on clean architecture and premium user experience.
 
 ![Portfolio Preview](assets/bookly_protfolio.png)
 
 ## ✨ Features
 
 - **🌓 Dark/Light Mode**: Seamless theme switching with persistent state.
-- **🚀 Anti-Gravity Animations**: Floating elements, parallax scrolling, and spring animations.
+- **🚀 Dynamic Animations**: Floating elements, parallax scrolling, and spring animations.
 - **📱 Fully Responsive**: Adaptive layout for web, tablet, and mobile.
 - **🎨 Clean Architecture**: Structured using Presentation, Cubit, Domain, and Data layers.
 - **⚡ High Performance**: Optimized with `flutter_animate` and efficient state management.
