@@ -5,7 +5,7 @@ Portfolio 🚀
 
 A stunning, responsive Flutter Web portfolio featuring a modern aesthetic with floating elements, parallax effects, and smooth animations. Built with a focus on clean architecture and premium user experience.
 
-![Portfolio Preview](assets/bookly_protfolio.png)
+![Portfolio Preview](assets/protfolio.png)
 
 ## ✨ Features
 
