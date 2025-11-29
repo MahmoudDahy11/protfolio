@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../cubit/portfolio_cubit.dart';
-import 'anti_gravity_card.dart';
+import 'animation_card.dart';
 
 class SkillsSection extends StatelessWidget {
   const SkillsSection({super.key});
@@ -28,7 +28,7 @@ class SkillsSection extends StatelessWidget {
                   runSpacing: 30,
                   alignment: WrapAlignment.center,
                   children: state.skills.map((skill) {
-                    return AntiGravityCard(
+                    return AnimationCard(
                       width: 150,
                       height: 150,
                       child: Column(
