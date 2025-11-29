@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 # Flutter Portfolio 🚀
-=======
+
 Portfolio 🚀
->>>>>>> 07daf08c8a389ba08a2baee91a492d2ccd835c57
+
 
 A stunning, responsive Flutter Web portfolio featuring a modern aesthetic with floating elements, parallax effects, and smooth animations. Built with a focus on clean architecture and premium user experience.
 
@@ -80,4 +79,5 @@ lib/
 ---
 
 Made with 💙 and Flutter.
+
 
