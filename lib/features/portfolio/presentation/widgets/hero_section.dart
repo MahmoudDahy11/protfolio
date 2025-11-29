@@ -128,21 +128,21 @@ class HeroSection extends StatelessWidget {
   Widget _buildProfileImage() {
     return Center(
           child: CircleAvatar(
-            radius: 150, // نصف حجم الـ container الأصلي (300/2)
+            radius: 150,
             backgroundColor: AppTheme.primaryColor,
             child: Container(
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [
                   BoxShadow(
-                    color: AppTheme.primaryColor.withOpacity(0.5),
+                    color: AppTheme.primaryColor.withValues(alpha: .5),
                     blurRadius: 50,
                     spreadRadius: 10,
                   ),
                 ],
               ),
               child: CircleAvatar(
-                radius: 140, // أقل شوية لتظهر الـ shadow
+                radius: 140,
                 backgroundImage: AssetImage(Assets.profileProtfolio),
               ),
             ),
