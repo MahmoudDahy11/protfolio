@@ -1,4 +1,4 @@
-# Anti-Gravity Portfolio 🚀
+Portfolio 🚀
 
 A stunning, responsive Flutter Web portfolio featuring an "Anti-Gravity" aesthetic with floating elements, parallax effects, and smooth animations. Built with a focus on clean architecture and premium user experience.
 
@@ -76,3 +76,4 @@ lib/
 ---
 
 Made with 💙 and Flutter.
+
