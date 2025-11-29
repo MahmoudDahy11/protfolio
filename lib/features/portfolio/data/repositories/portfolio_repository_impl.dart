@@ -95,6 +95,31 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
         iconPath: 'assets/icons/git.png',
         proficiency: 0.90,
       ),
+      SkillModel(
+        name: 'OOP',
+        iconPath: 'assets/icons/git.png',
+        proficiency: 0.90,
+      ),
+      SkillModel(
+        name: 'Testing,',
+        iconPath: 'assets/icons/git.png',
+        proficiency: 0.95,
+      ),
+      SkillModel(
+        name: 'MVVM',
+        iconPath: 'assets/icons/git.png',
+        proficiency: 0.95,
+      ),
+      SkillModel(
+        name: 'Payment',
+        iconPath: 'assets/icons/git.png',
+        proficiency: 0.95,
+      ),
+      SkillModel(
+        name: 'SOLID',
+        iconPath: 'assets/icons/git.png',
+        proficiency: 0.95,
+      ),
     ];
   }
 }

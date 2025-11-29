@@ -54,7 +54,7 @@ class AppTheme {
       surface: lightSurface,
     ),
     textTheme: GoogleFonts.poppinsTextTheme().apply(
-      bodyColor: Colors.black87,
+      bodyColor: Colors.white,
       displayColor: Colors.black87,
     ),
     appBarTheme: const AppBarTheme(

@@ -7,10 +7,3 @@ class Assets {
   static const String booklyProtfolio2 = 'assets/bookly_protfolio_2.png';
   static const String profileProtfolio = 'assets/profile_protfolio.jpg';
 }
-
-/**
- * please add booklyProtfolio image in project section in Bookly App
- * please add weatherProtfolio image in project section in Weather App
- * please add suitsProtfolio image in project section in Suits App
- * please add fruitsProtfolio image in project section in Fruits App
- */
