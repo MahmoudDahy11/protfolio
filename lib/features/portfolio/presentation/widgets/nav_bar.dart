@@ -5,12 +5,18 @@ import '../cubit/theme_cubit.dart';
 
 class NavBar extends StatelessWidget {
   final Function(int) onNavItemTap;
+  final int selectedIndex;
 
-  const NavBar({super.key, required this.onNavItemTap});
+  const NavBar({
+    super.key,
+    required this.onNavItemTap,
+    required this.selectedIndex,
+  });
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
@@ -28,11 +34,13 @@ class NavBar extends StatelessWidget {
           if (MediaQuery.of(context).size.width > 800)
             Row(
               children: [
-                _NavItem(title: 'Home', onTap: () => onNavItemTap(0)),
-                _NavItem(title: 'About', onTap: () => onNavItemTap(1)),
-                _NavItem(title: 'Skills', onTap: () => onNavItemTap(2)),
-                _NavItem(title: 'Projects', onTap: () => onNavItemTap(3)),
-                _NavItem(title: 'Contact', onTap: () => onNavItemTap(4)),
+                ...List.generate(navItems.length, (index) {
+                  return _NavItem(
+                    title: navItems[index],
+                    isSelected: selectedIndex == index,
+                    onTap: () => onNavItemTap(index),
+                  );
+                }),
                 const SizedBox(width: 20),
                 IconButton(
                   icon: Icon(isDark ? Icons.light_mode : Icons.dark_mode),
@@ -44,7 +52,6 @@ class NavBar extends StatelessWidget {
             IconButton(
               icon: const Icon(Icons.menu),
               onPressed: () {
-                // Open drawer or modal for mobile menu
                 Scaffold.of(context).openEndDrawer();
               },
             ),
@@ -57,8 +64,13 @@ class NavBar extends StatelessWidget {
 class _NavItem extends StatelessWidget {
   final String title;
   final VoidCallback onTap;
+  final bool isSelected;
 
-  const _NavItem({required this.title, required this.onTap});
+  const _NavItem({
+    required this.title,
+    required this.onTap,
+    required this.isSelected,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -66,11 +78,24 @@ class _NavItem extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: TextButton(
         onPressed: onTap,
-        child: Text(
-          title,
-          style: Theme.of(
-            context,
-          ).textTheme.bodyLarge?.copyWith(fontWeight: FontWeight.w500),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              title,
+              style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                fontWeight: FontWeight.w500,
+                color: isSelected ? AppTheme.primaryColor : null,
+              ),
+            ),
+            if (isSelected)
+              Container(
+                margin: const EdgeInsets.only(top: 4),
+                height: 2,
+                width: 20,
+                color: AppTheme.primaryColor,
+              ),
+          ],
         ),
       ),
     );
