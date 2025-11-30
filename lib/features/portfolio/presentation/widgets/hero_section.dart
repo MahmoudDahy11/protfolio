@@ -58,7 +58,11 @@ class HeroSection extends StatelessWidget {
         const SizedBox(height: 10),
         Text(
           AppConstants.title,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineSmall?.copyWith(
+            color: Theme.of(context).brightness == Brightness.light
+                ? Colors.black87
+                : null,
+          ),
         ).animate().fadeIn(delay: 400.ms).slideX(),
         const SizedBox(height: 20),
         Text(

@@ -9,6 +9,7 @@ class AnimationCard extends StatefulWidget {
   final double? height;
   final EdgeInsetsGeometry padding;
   final bool isGlass;
+  final Color? backgroundColor;
 
   const AnimationCard({
     super.key,
@@ -18,6 +19,7 @@ class AnimationCard extends StatefulWidget {
     this.height,
     this.padding = const EdgeInsets.all(20),
     this.isGlass = false,
+    this.backgroundColor,
   });
 
   @override
@@ -47,9 +49,13 @@ class _AnimationCardState extends State<AnimationCard> {
             ..translate(0.0, _isHovered ? AppAnimations.hoverTranslateY : 0.0)
             ..scale(_isHovered ? AppAnimations.hoverScale : 1.0),
           decoration: BoxDecoration(
-            color: widget.isGlass
-                ? Theme.of(context).colorScheme.surface.withValues(alpha: .1)
-                : Theme.of(context).colorScheme.surface,
+            color:
+                widget.backgroundColor ??
+                (widget.isGlass
+                    ? Theme.of(
+                        context,
+                      ).colorScheme.surface.withValues(alpha: .1)
+                    : Theme.of(context).colorScheme.surface),
             borderRadius: BorderRadius.circular(20),
             gradient: widget.isGlass ? null : AppTheme.darkCardGradient,
             boxShadow: _isHovered

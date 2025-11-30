@@ -24,6 +24,10 @@ class AboutSection extends StatelessWidget {
               AnimationCard(
                 width: double.infinity,
                 isGlass: true,
+                backgroundColor:
+                    Theme.of(context).brightness == Brightness.light
+                    ? Colors.white.withValues(alpha: .8)
+                    : null,
                 child: Column(
                   children: [
                     Text(
@@ -31,6 +35,9 @@ class AboutSection extends StatelessWidget {
                       style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                         height: 1.8,
                         fontSize: 18,
+                        color: Theme.of(context).brightness == Brightness.light
+                            ? Colors.black
+                            : null,
                       ),
                       textAlign: TextAlign.center,
                     ),
