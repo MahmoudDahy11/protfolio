@@ -1,6 +1,6 @@
 class AppConstants {
   static const String cvUrl =
-      'https://drive.google.com/file/d/1uT4pPBfoX3mem6Cvn4M20ZeVd7RSmU5h/view?usp=drive_link';
+      'https://drive.google.com/file/d/1YH8NK7k8Nm9ueti9lV6gqMDb_oHqmvdR/view?usp=drive_link';
   static const String githubUrl = 'https://github.com/MahmoudDahy11';
   static const String linkedinUrl = 'https://www.linkedin.com/in/mahmoud-dahy/';
   static const String email = 'dahym2028@gmail.com';
