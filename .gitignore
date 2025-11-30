@@ -44,4 +44,8 @@ app.*.map.json
 /android/app/profile
 /android/app/release
 
+
+lib/features/portfolio/presentation/cubit/portfolio_cubit.dart
+
+lib/features/portfolio/data/repositories/portfolio_repository_impl.dart
 lib/core/utils/secret.dart
