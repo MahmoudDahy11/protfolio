@@ -1,6 +1,8 @@
+import '../../domain/entities/certificate.dart';
 import '../../domain/entities/project.dart';
 import '../../domain/entities/skill.dart';
 import '../../domain/repositories/portfolio_repository.dart';
+import '../models/certificate_model.dart';
 import '../models/project_model.dart';
 import '../models/skill_model.dart';
 import '../../../../core/utils/assets.dart';
@@ -119,6 +121,41 @@ class PortfolioRepositoryImpl implements PortfolioRepository {
         name: 'SOLID',
         iconPath: 'assets/icons/git.png',
         proficiency: 0.95,
+      ),
+    ];
+  }
+
+  @override
+  Future<List<Certificate>> getCertificates() async {
+    await Future.delayed(const Duration(milliseconds: 500));
+
+    return const [
+      CertificateModel(
+        name: 'Flutter Advanced Course Blocand MVVM Pattern',
+        issuer: 'Udemy',
+        date: 'Aug 2025',
+        credentialUrl:
+            'https://www.udemy.com/certificate/UC-e29a2a39-6a4e-4526-8fd6-a6e2f335e890/',
+      ),
+      CertificateModel(
+        name: 'Complete Flutter & DartDevelopment from Udemy',
+        issuer: 'Udemy',
+        date: 'July 2025',
+        credentialUrl:
+            'https://www.udemy.com/certificate/UC-4cbf2516-5506-4ce4-b3ea-31e93399497b/',
+      ),
+      CertificateModel(
+        name: 'Mastering Flutter: Responsive& Adaptive UI Design',
+        issuer: 'Udemy',
+        date: 'Sep 2025',
+        credentialUrl:
+            'https://www.udemy.com/course/mastering-flutter-responsive-adaptive-ui-design-arabic',
+      ),
+      CertificateModel(
+        name: 'Flutter Payment Integration:Stripe, PayPal & More!',
+        issuer: 'Udemy',
+        date: 'Oct 2025',
+        credentialUrl: '',
       ),
     ];
   }
