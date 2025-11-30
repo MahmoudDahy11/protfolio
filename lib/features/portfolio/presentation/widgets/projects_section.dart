@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../cubit/portfolio_cubit.dart';
+import '../cubit/portfolio_state.dart';
 import 'animation_card.dart';
 
 class ProjectsSection extends StatelessWidget {

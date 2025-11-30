@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import '../cubit/portfolio_cubit.dart';
+import '../cubit/portfolio_state.dart';
 import 'animation_card.dart';
 
 class SkillsSection extends StatelessWidget {

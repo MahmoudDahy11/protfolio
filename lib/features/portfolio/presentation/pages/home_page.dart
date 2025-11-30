@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../cubit/portfolio_cubit.dart';
 import '../widgets/about_section.dart';
+import '../widgets/certificates_section.dart';
 import '../widgets/contact_section.dart';
 import '../widgets/hero_section.dart';
 import '../widgets/mobile_drawer.dart';
@@ -19,7 +20,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   final ScrollController _scrollController = ScrollController();
-  final List<GlobalKey> _sectionKeys = List.generate(5, (_) => GlobalKey());
+  final List<GlobalKey> _sectionKeys = List.generate(6, (_) => GlobalKey());
   int _currentIndex = 0;
 
   @override
@@ -101,7 +102,8 @@ class _HomePageState extends State<HomePage> {
                       AboutSection(key: _sectionKeys[1]),
                       SkillsSection(key: _sectionKeys[2]),
                       ProjectsSection(key: _sectionKeys[3]),
-                      ContactSection(key: _sectionKeys[4]),
+                      CertificatesSection(key: _sectionKeys[4]),
+                      ContactSection(key: _sectionKeys[5]),
                       const SizedBox(height: 50), // Footer padding
                     ],
                   ),
