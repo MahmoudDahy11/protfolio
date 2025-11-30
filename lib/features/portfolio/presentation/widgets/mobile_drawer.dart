@@ -16,7 +16,14 @@ class MobileDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+    final navItems = [
+      'Home',
+      'About',
+      'Skills',
+      'Projects',
+      'Certificates',
+      'Contact',
+    ];
 
     return Drawer(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
@@ -40,7 +47,9 @@ class MobileDrawer extends StatelessWidget {
               title: Text(
                 navItems[index],
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                  color: isSelected ? AppTheme.primaryColor : null,
+                  color: isSelected
+                      ? AppTheme.primaryColor
+                      : (isDark ? null : Colors.black),
                   fontWeight: isSelected ? FontWeight.bold : FontWeight.normal,
                 ),
               ),
@@ -59,7 +68,10 @@ class MobileDrawer extends StatelessWidget {
             padding: const EdgeInsets.all(30.0),
             child: Row(
               children: [
-                const Text('Switch Theme'),
+                Text(
+                  'Switch Theme',
+                  style: TextStyle(color: isDark ? null : Colors.black),
+                ),
                 const Spacer(),
                 IconButton(
                   icon: Icon(isDark ? Icons.light_mode : Icons.dark_mode),

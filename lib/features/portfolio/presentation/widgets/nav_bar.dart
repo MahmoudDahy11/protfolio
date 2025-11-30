@@ -16,7 +16,14 @@ class NavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final navItems = ['Home', 'About', 'Skills', 'Projects', 'Contact'];
+    final navItems = [
+      'Home',
+      'About',
+      'Skills',
+      'Projects',
+      'Certificates',
+      'Contact',
+    ];
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 20),
