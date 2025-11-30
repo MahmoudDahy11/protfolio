@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/theme/app_theme.dart';
+import '../../../../core/utils/constants.dart';
 import '../cubit/theme_cubit.dart';
 
 class MobileDrawer extends StatelessWidget {
@@ -64,6 +67,37 @@ class MobileDrawer extends StatelessWidget {
             );
           }),
           const Spacer(),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 30.0, vertical: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.github, size: 28),
+                  onPressed: () => launchUrl(Uri.parse(AppConstants.githubUrl)),
+                  color: isDark ? Colors.white : Colors.black,
+                  tooltip: 'GitHub',
+                ),
+                const SizedBox(width: 20),
+                IconButton(
+                  icon: const FaIcon(FontAwesomeIcons.linkedin, size: 28),
+                  onPressed: () =>
+                      launchUrl(Uri.parse(AppConstants.linkedinUrl)),
+                  color: isDark ? Colors.white : Colors.black,
+                  tooltip: 'LinkedIn',
+                ),
+                const SizedBox(width: 20),
+                IconButton(
+                  icon: const Icon(Icons.email, size: 28),
+                  onPressed: () =>
+                      launchUrl(Uri.parse('mailto:${AppConstants.email}')),
+                  color: isDark ? Colors.white : Colors.black,
+                  tooltip: 'Email',
+                ),
+              ],
+            ),
+          ),
+          const Divider(thickness: 1, height: 1),
           Padding(
             padding: const EdgeInsets.all(30.0),
             child: Row(
