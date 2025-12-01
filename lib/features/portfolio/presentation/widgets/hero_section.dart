@@ -74,6 +74,7 @@ class HeroSection extends StatelessWidget {
         const SizedBox(height: 40),
         Row(
           children: [
+            // scrolling to projects section
             ElevatedButton(
               onPressed: onCtaTap,
               style: ElevatedButton.styleFrom(
@@ -92,6 +93,7 @@ class HeroSection extends StatelessWidget {
               ),
             ),
             const SizedBox(width: 20),
+            //  download cv button
             OutlinedButton(
               onPressed: () => launchUrl(Uri.parse(AppConstants.cvUrl)),
               style: OutlinedButton.styleFrom(
