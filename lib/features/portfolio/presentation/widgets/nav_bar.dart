@@ -81,6 +81,7 @@ class _NavItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: TextButton(
@@ -92,7 +93,9 @@ class _NavItem extends StatelessWidget {
               title,
               style: Theme.of(context).textTheme.bodyLarge?.copyWith(
                 fontWeight: FontWeight.w500,
-                color: isSelected ? AppTheme.primaryColor : null,
+                color: isSelected
+                    ? AppTheme.primaryColor
+                    : (isDark ? Colors.white : Colors.black),
               ),
             ),
             if (isSelected)
